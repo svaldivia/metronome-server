@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Metronome App</title>
+    <!-- <link rel="stylesheet" href="Path To stylesheet.css"> -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/howler/howler.js"></script>
+  </head>
+
+  <body>
+    <h1>BPM Set to: <span id="currentBpm">none</span></h1>
+    <p>Timestamp: <span id="timestamp"></span></p>
+    <form id="bpmForm" action="">
+      <label>BPM</label>
+      <input id="bpm" type="number" required />
+      <button type="submit">
+        Start
+      </button>
+      <button id="bpmStop" type="button">Stop</button>
+    </form>
+    <script src="./app.js"></script>
+  </body>
+</html>
