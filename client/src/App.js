@@ -42,6 +42,7 @@ class App extends Component {
   clickSounds = [
     new Howl({
       src: [clickSound],
+      html5: true,
       preload: true
     })
   ];
@@ -121,6 +122,7 @@ class App extends Component {
   handleSubmitBpm = submitEvent => {
     submitEvent.preventDefault();
     const inputValue = submitEvent.target.bpm.value;
+    this.clickSounds[0].play();
     this.socket.emit('BPM Start', inputValue);
   };
 
